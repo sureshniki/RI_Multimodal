@@ -1,1 +1,0 @@
-Simulated snapshot artifact placeholder matching task validation layout rules.
