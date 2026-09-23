@@ -1,0 +1,97 @@
+/* Shared application theme. Loaded after the bundled Azia styles. */
+:root {
+  --app-background: #edf2f8;
+  --app-font: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background: var(--app-background);
+  font-family: var(--app-font);
+  line-height: 1.5;
+  color: #334155;
+}
+
+input, button, select, textarea,
+.az-logo, .az-content-breadcrumb, .az-dashboard-date .date > div:first-child,
+.card h2, .card h4, .card h6, .az-signin-header h1, .az-signup-header h2 {
+  font-family: var(--app-font);
+}
+
+.az-content, .az-signin-wrapper, .az-signup-wrapper {
+  background: var(--app-background);
+}
+
+.card {
+  background-color: #fff;
+  border-color: #dce4ef;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(30, 50, 80, .04);
+}
+
+.az-content-body, .az-content .row > [class*="col-"],
+.card-body, .card-header > div {
+  min-width: 0;
+}
+
+.az-dashboard-one-title, .az-dashboard-nav {
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.az-dashboard-date { flex-wrap: wrap; gap: 8px 0; }
+.az-dashboard-nav .nav { flex-wrap: wrap; row-gap: 12px; }
+.az-dashboard-nav { padding-bottom: 12px; }
+
+.card-dashboard-one .card-header {
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.card-dashboard-one .card-header > div:first-child { flex: 1 1 220px; }
+.card-dashboard-one .card-header .btn-group { flex-shrink: 0; margin-top: 0; }
+.card-dashboard-one .card-header .card-title { line-height: 1.4; }
+
+/* Keep metrics in document flow so the plot cannot cover their labels. */
+.card-dashboard-one .card-body-top {
+  position: static;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  padding: 0 20px 20px;
+}
+.card-dashboard-one .card-body-top > div + div { margin-left: 0; }
+.card-dashboard-one .card-body-top h2 { font-size: 22px; }
+.card-dashboard-one .card-body .flot-chart-wrapper { margin: 0 12px; }
+.card-dashboard-one .card-body .flot-chart .flot-y-axis > div { transform: none; }
+
+.card-dashboard-two .card-header h6,
+.card-dashboard-three .card-header h6 {
+  flex-wrap: wrap;
+  gap: 6px;
+  line-height: 1.3;
+}
+.card-dashboard-two .card-header h6 i,
+.card-dashboard-two .card-header h6 small,
+.card-dashboard-three .card-header h6 small { margin-left: 0; }
+
+/* Give the session summary and chart their own space at every width. */
+.card-dashboard-three { height: auto; }
+.card-dashboard-three .card-header { position: static; max-width: none; }
+.card-dashboard-three .card-body { display: block; padding: 0 20px 20px; }
+.card-dashboard-three .chart { position: relative; width: 100%; height: 160px; }
+.card-dashboard-four .chart { position: relative; width: 100%; height: 220px; }
+
+.az-list-item { align-items: flex-start; gap: 12px; }
+.az-list-item > div { min-width: 0; overflow-wrap: anywhere; }
+.az-list-item > div:last-child { flex-shrink: 0; }
+.az-traffic-detail-item > div:first-child { flex-wrap: wrap; gap: 4px 12px; }
+.card-dashboard-five .card-body > div { flex-wrap: wrap; row-gap: 10px; }
+.card-dashboard-five .card-chart { flex-shrink: 0; }
+.card-table-one .table-responsive { width: 100%; }
+.card-table-one .table th, .card-table-one .table td { padding: 10px 12px; }
+.az-footer > .container { height: auto; min-height: 40px; flex-wrap: wrap; gap: 8px; padding-top: 12px; padding-bottom: 12px; }
+
+@media (max-width: 767px) {
+  .card-dashboard-one .card-body-top { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .az-dashboard-one-title { display: flex; align-items: flex-start; }
+  .az-dashboard-date { margin-top: 0; }
+}
