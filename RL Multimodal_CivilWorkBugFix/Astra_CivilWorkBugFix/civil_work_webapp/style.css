@@ -1,0 +1,91 @@
+﻿:root {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #20252b;
+  background: #f7f8fa;
+  --page-gutter: clamp(20px, 5vw, 72px);
+  --content-width: 1160px;
+  --section-space: clamp(48px, 7vw, 88px);
+  --accent: #a75f00;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body { margin: 0; font-size: 16px; line-height: 1.6; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { line-height: 1.2; overflow-wrap: break-word; }
+h2 { font-size: clamp(28px, 3vw, 36px); letter-spacing: -0.025em; }
+h3 { font-size: 21px; }
+p { overflow-wrap: break-word; }
+a:focus-visible, button:focus-visible { outline: 3px solid #e6a332; outline-offset: 5px; }
+button { font: inherit; }
+
+.topbar, .hero, .section, .project, .contact, footer {
+  padding-inline: max(var(--page-gutter), calc((100% - var(--content-width)) / 2));
+}
+.topbar {
+  min-height: 80px;
+  padding-block: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  box-shadow: 0 2px 10px #00000012;
+}
+.logo { font-size: 26px; font-weight: 800; letter-spacing: -0.04em; color: var(--accent); }
+.topbar nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; }
+.topbar nav a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: #30363d; font-weight: 600; }
+.topbar nav a:hover { color: var(--accent); }
+
+.hero {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  padding-block: var(--section-space);
+  background: linear-gradient(90deg, #111b25ed, #111b2599), url('civil-work.jpg') center/cover;
+}
+.hero-content { max-width: 700px; color: #fff; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; color: #f0b653; }
+.hero h1 { font-size: clamp(34px, 4.5vw, 56px); line-height: 1.1; letter-spacing: -0.035em; margin-block: 16px 24px; }
+.hero-content > p:not(.eyebrow) { max-width: 600px; font-size: clamp(17px, 2vw, 19px); color: #e4e9ed; }
+.btn, button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; background: var(--accent); color: #fff; border: 0; border-radius: 6px; padding: 12px 24px; text-decoration: none; font-weight: 700; cursor: pointer; }
+.btn:hover, button:hover { background: #874d00; }
+.hero .btn { margin-top: 28px; }
+
+.section { padding-block: var(--section-space); text-align: center; }
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 32px; }
+.cards article { padding: 28px 24px; text-align: left; background: #fff; border-radius: 9px; box-shadow: 0 6px 22px #0000000a; border-top: 4px solid #d88912; }
+.cards p { margin-top: 14px; color: #59636d; }
+
+.project { padding-block: var(--section-space); display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: center; background: #fff; }
+.project img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 9px; }
+.project h2 { margin-block: 12px 20px; }
+.project p { color: #59636d; }
+.project .eyebrow { color: var(--accent); }
+
+.contact { text-align: center; padding-block: var(--section-space); background: #17212b; color: #fff; }
+.contact > p { margin-top: 16px; color: #d5dce3; }
+.contact button { margin-top: 24px; }
+.contact #message { min-height: 1.6em; color: #f0b653; font-weight: 600; }
+footer { text-align: center; padding-block: 24px; background: #0f171f; color: #b4bec7; font-size: 14px; }
+
+@media (max-width: 800px) {
+  .cards { grid-template-columns: 1fr; gap: 20px; }
+  .project { grid-template-columns: 1fr; }
+  .project img { max-height: 440px; }
+}
+@media (max-width: 600px) {
+  html { scroll-padding-top: 140px; }
+  .topbar { flex-direction: column; align-items: flex-start; gap: 4px; padding-block: 10px; }
+  .topbar nav { width: 100%; justify-content: space-between; gap: 4px 12px; }
+  .topbar nav a { font-size: 14px; }
+  .hero { min-height: 480px; }
+  .hero .btn { width: 100%; }
+  .cards article { padding: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

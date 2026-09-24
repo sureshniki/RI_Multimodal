@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BuildRight Civil Works</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">BuildRight</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">CIVIL ENGINEERING & CONSTRUCTION</p>
+      <h1>Building Strong Foundations for Tomorrow</h1>
+      <p>Residential, commercial, structural and infrastructure civil works delivered with quality and safety.</p>
+      <a class="btn" href="#contact">Request a Quote</a>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <article><h3>Building Construction</h3><p>End-to-end residential and commercial construction services.</p></article>
+      <article><h3>Structural Works</h3><p>RCC, foundations, columns, beams, slabs and structural improvements.</p></article>
+      <article><h3>Road & Site Works</h3><p>Site development, drainage, paving and civil infrastructure works.</p></article>
+    </div>
+  </section>
+
+  <section class="project" id="projects">
+    <img src="civil-work.jpg" alt="Civil construction project">
+    <div>
+      <p class="eyebrow">FEATURED PROJECT</p>
+      <h2>Quality Civil Work</h2>
+      <p>Our sample project section demonstrates how you can showcase construction progress, completed projects and engineering capabilities.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Start Your Project</h2>
+    <p>Contact our civil works team for a project consultation.</p>
+    <button onclick="showMessage()">Contact Us</button>
+    <p id="message"></p>
+  </section>
+
+  <footer>© 2026 BuildRight Civil Works. Sample Web Application.</footer>
+
+  <script>
+    function showMessage() {
+      document.getElementById('message').textContent =
+        'Thank you! This sample contact button is working.';
+    }
+  </script>
+</body>
+</html>

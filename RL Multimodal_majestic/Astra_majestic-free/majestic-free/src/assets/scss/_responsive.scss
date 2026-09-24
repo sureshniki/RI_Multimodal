@@ -1,0 +1,69 @@
+/* Shared layout refinements. Keep this file last in style.scss. */
+:root {
+  --app-font: "Segoe UI", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  --banner-height: 0px;
+}
+body, .btn, .form-control, .form-select, .tooltip, .popover {
+  font-family: var(--app-font);
+}
+body { line-height: 1.5; }
+button, input, select, textarea { font-family: inherit; }
+.main-panel, .content-wrapper, .stretch-card, .card, .card-body { min-width: 0; }
+.sidebar { flex-shrink: 0; }
+.content-wrapper { padding: 2rem 1.5rem; }
+.table-responsive { max-width: 100%; }
+.card canvas { max-width: 100%; }
+.navbar.fixed-top { top: var(--banner-height); flex-wrap: nowrap; }
+.page-body-wrapper:not(.full-page-wrapper) { padding-top: calc(60px + var(--banner-height)); }
+.navbar .navbar-menu-wrapper { min-width: 0; }
+.navbar .navbar-menu-wrapper > .navbar-nav:first-child { min-width: 0; flex: 1; }
+.navbar .navbar-menu-wrapper .navbar-nav-right { flex-shrink: 0; }
+.navbar .navbar-menu-wrapper .nav-search .input-group { align-items: center; flex-wrap: nowrap; }
+.navbar .navbar-menu-wrapper .nav-search .input-group .input-group-text { margin-top: 0; }
+.navbar .navbar-menu-wrapper .nav-search .input-group .form-control { min-width: 0; }
+.dashboard-heading, .dashboard-heading > div { gap: 1rem; }
+.dashboard-actions { align-items: center !important; gap: .75rem; }
+.dashboard-actions .btn { margin: 0 !important; }
+.dashboard-tabs .tab-pane > .d-flex { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.dashboard-tabs .tab-pane .item { min-width: 0; margin: 0 !important; padding: 1.25rem .75rem !important; }
+.dashboard-tabs .item h5 { font-variant-numeric: tabular-nums; }
+.dashboard-tabs .nav-tabs { flex-wrap: nowrap; overflow-x: auto; }
+.chartjs-legend ul { gap: .5rem 1rem; }
+.chartjs-legend ul li { margin-right: 0; }
+#proBanner .card-body-padding { gap: .75rem; }
+#proBanner .card-body-padding > :last-child { flex-shrink: 0; }
+#proBanner .buy-now-btn { white-space: nowrap; }
+
+@media (max-width: 1199px) {
+  .dashboard-tabs .tab-pane > .d-flex { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 991px) {
+  .navbar .navbar-brand-wrapper .navbar-brand-inner-wrapper { margin: 0; justify-content: center !important; }
+  .navbar .navbar-menu-wrapper > .navbar-nav:first-child { display: none; }
+  .navbar .navbar-menu-wrapper .navbar-nav-right { margin-left: auto; }
+  .navbar .navbar-menu-wrapper .navbar-nav .nav-item { margin-left: .5rem; margin-right: .5rem !important; }
+  .navbar .navbar-menu-wrapper .navbar-toggler-right { padding: .5rem; margin-left: .5rem; }
+  .sidebar-offcanvas { top: calc(60px + var(--banner-height)); max-height: calc(100dvh - 60px - var(--banner-height)); }
+}
+@media (max-width: 767px) {
+  .content-wrapper { padding: 1.25rem 1rem; }
+  .grid-margin { margin-bottom: 1.25rem; }
+  .card .card-body { padding: 1.25rem; }
+  .dashboard-heading { flex-direction: column; align-items: stretch; }
+  .dashboard-heading > div:first-child { align-items: flex-start !important; flex-direction: column; gap: .5rem; }
+  .dashboard-actions { justify-content: flex-start !important; }
+  .dashboard-tabs .tab-pane > .d-flex { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dashboard-tabs .tab-pane .item { justify-content: flex-start !important; border-bottom: 1px solid #eee; }
+  .dashboard-tabs .item .icon-box-secondary { margin-right: .5rem !important; flex-shrink: 0; }
+  .dashboard-tabs .nav-tabs { padding-left: .5rem !important; padding-right: .5rem !important; }
+  .dashboard-tabs .nav-tabs .nav-link { padding: 1rem .75rem; white-space: nowrap; }
+  .footer { padding: 1.25rem 1rem; display: flex; flex-direction: column; gap: .5rem; text-align: center; }
+  .auth .auth-form-light { padding: 1.5rem !important; }
+  #proBanner .buy-now-text { font-size: .75rem; }
+  #proBanner .buy-now-btn { min-width: auto; padding: .5rem 0; }
+  #proBanner .card-body-padding > :first-child > .d-flex { flex-wrap: wrap; gap: .25rem; }
+}
+@media (max-width: 359px) {
+  .dashboard-tabs .tab-pane > .d-flex { grid-template-columns: 1fr; }
+  .navbar .navbar-menu-wrapper { padding-left: .5rem; padding-right: .5rem; }
+}
