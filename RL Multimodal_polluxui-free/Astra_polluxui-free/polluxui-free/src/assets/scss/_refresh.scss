@@ -1,0 +1,135 @@
+/* Shared visual refresh and responsive layout corrections. */
+:root {
+  --bs-font-sans-serif: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --bs-body-font-family: var(--bs-font-sans-serif);
+}
+
+body, .sidebar, .btn, .form-control, .form-select,
+.navbar, .navbar-breadcrumb, .dropdown-menu {
+  font-family: var(--bs-font-sans-serif);
+}
+
+body, .page-body-wrapper, .content-wrapper, .footer {
+  background: #eaf1f8;
+}
+
+/* Let the main column consume the space remaining after the sidebar margin. */
+.main-panel {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.sidebar, .navbar-brand-wrapper, .navbar-links-wrapper {
+  flex-shrink: 0;
+}
+
+.navbar .navbar-menu-wrapper,
+.navbar-breadcrumb .navbar-menu-wrapper {
+  min-width: 0;
+}
+
+.navbar .nav-profile > .nav-link {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.navbar-breadcrumb {
+  background: #327b91;
+  margin-top: calc(4.625rem + 4px);
+}
+
+.navbar-breadcrumb .navbar-menu-wrapper {
+  height: auto;
+  min-height: 4.062rem;
+  flex-wrap: wrap;
+  gap: .75rem;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
+.navbar-breadcrumb .navbar-menu-wrapper > .navbar-nav {
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.navbar-breadcrumb .navbar-menu-wrapper .navbar-nav .nav-item.nav-search {
+  margin-left: 0;
+}
+
+.navbar-breadcrumb .navbar-menu-wrapper .navbar-nav .nav-item.nav-search .input-group {
+  flex-wrap: nowrap;
+}
+
+.content-wrapper .stretch-card,
+.content-wrapper .card,
+.content-wrapper .card-body {
+  min-width: 0;
+}
+
+.content-wrapper .card-body > .d-flex:not(.flex-column) {
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.content-wrapper canvas {
+  max-width: 100%;
+}
+
+/* Full-height rows below headings otherwise exceed their parent columns. */
+.content-wrapper .flex-column > .row.h-100 {
+  height: auto !important;
+  flex: 1;
+}
+
+.profile-card .card-body > .row > div {
+  width: 100%;
+}
+
+.profile-card .avatar {
+  margin-bottom: 1rem !important;
+}
+
+.profile-card h5, .profile-card p {
+  overflow-wrap: anywhere;
+}
+
+.profile-card .info {
+  gap: 1rem;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar .navbar-menu-wrapper .navbar-nav .nav-user-status {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar .navbar-brand-wrapper .navbar-brand-inner-wrapper {
+    margin: 0;
+    justify-content: center !important;
+  }
+
+  .navbar-breadcrumb .navbar-links-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .content-wrapper {
+    padding: 1rem;
+  }
+
+  .content-wrapper .card .card-body {
+    padding: 1.25rem;
+  }
+
+  .navbar-breadcrumb .navbar-menu-wrapper > .navbar-nav:first-child {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .navbar-breadcrumb .navbar-menu-wrapper .navbar-nav .nav-item {
+    margin-left: 0;
+  }
+}
