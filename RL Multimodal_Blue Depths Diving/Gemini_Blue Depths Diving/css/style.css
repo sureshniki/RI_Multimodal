@@ -1,0 +1,317 @@
+:root {
+  --primary: #0284c7;
+  --primary-hover: #0369a1;
+  --secondary: #075985;
+  --accent: #e0f2fe;
+  --dark: #0a2540;
+  --dark-surface: #06182c;
+  --bg-app: #f4f9fd;
+  --bg-surface: #ffffff;
+  --bg-services: #e8f3fa;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --card-border: #e2e8f0;
+  --font-headings: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background-color: var(--bg-app);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.display-heading,
+.section-title {
+  font-family: var(--font-headings);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--dark) !important;
+  padding: 0.85rem 0;
+  box-shadow: 0 2px 12px rgba(10, 37, 64, 0.25);
+  position: relative;
+  z-index: 1030;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-size: clamp(1.2rem, 3.5vw, 1.45rem);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.9rem !important;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.4rem 0.65rem;
+  border-radius: 6px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(224, 242, 254, 0.25);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    margin-top: 0.75rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 0.25rem;
+  }
+
+  .navbar .nav-link {
+    padding: 0.6rem 0.75rem !important;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #e8f4fc 0%, #d8eefe 100%);
+  position: relative;
+}
+
+.display-heading {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--dark);
+  margin-bottom: 1rem;
+  overflow-wrap: break-word;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 480px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(10, 37, 64, 0.14);
+}
+
+/* Buttons */
+.btn-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.28);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.38);
+}
+
+.btn-brand:active {
+  transform: translateY(0);
+}
+
+/* About Section */
+.section-about {
+  background-color: var(--bg-surface);
+  position: relative;
+}
+
+.section-title {
+  color: var(--dark);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  line-height: 1.25;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 520px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(10, 37, 64, 0.1);
+}
+
+.feature-list li {
+  font-size: 0.98rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Services Section */
+.section-services {
+  background-color: var(--bg-services);
+  position: relative;
+}
+
+.card-service {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--card-border);
+  border-top: 4px solid var(--primary);
+  border-radius: 12px;
+  height: 100%;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 16px rgba(10, 37, 64, 0.05);
+}
+
+.card-service:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(2, 132, 199, 0.16);
+}
+
+.card-service h6 {
+  color: var(--dark);
+  font-size: 1.05rem;
+  min-height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-service p {
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Testimonials */
+.section-testimonial {
+  background-color: var(--bg-surface);
+  position: relative;
+}
+
+.testimonial-card {
+  background-color: var(--bg-app);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 6px 20px rgba(10, 37, 64, 0.04);
+}
+
+.testimonial-card p.fs-4 {
+  color: var(--dark);
+  font-family: var(--font-headings);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Contact / Dark Hero Section */
+.hero-dark {
+  background-color: var(--dark);
+  color: #ffffff;
+  position: relative;
+}
+
+.hero-dark h2 {
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
+}
+
+/* Footer */
+.app-footer {
+  background-color: var(--dark-surface);
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Global Images & Badges */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.badge-theme {
+  background-color: var(--primary);
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .hero-img,
+  .about-img {
+    height: 260px;
+    max-width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .card-service {
+    min-height: auto;
+    padding: 1.5rem !important;
+  }
+
+  .card-service h6 {
+    min-height: auto;
+  }
+
+  .hero .btn-brand,
+  .hero-dark .btn-brand {
+    width: 100%;
+  }
+}
