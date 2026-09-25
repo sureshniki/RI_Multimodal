@@ -1,0 +1,21 @@
+:root {
+  --primary: #7b3fa0;
+  --secondary: #5c2d79;
+  --accent: #f3e9f8;
+  --dark: #3a1a4a;
+}
+body { font-family: 'Roboto', sans-serif; color: #212529; }
+h1, h2, h3, .navbar-brand, .display-heading { font-family: 'Oswald', serif; }
+.navbar { background-color: var(--dark) !important; }
+.navbar-brand, .nav-link { color: #fff !important; }
+.btn-brand { background-color: var(--primary); border-color: var(--primary); color:#fff; }
+.btn-brand:hover { background-color: var(--secondary); border-color: var(--secondary); color:#fff; }
+.hero { background-color: var(--accent); }
+.hero-dark { background-color: var(--dark); color: #fff; }
+.hero-image-full { background-size: cover; background-position: center; position: relative; }
+.hero-overlay { background: rgba(0,0,0,0.45); }
+.section-title { color: var(--dark); }
+.card-service { border-top: 4px solid var(--primary); height: 100%; }
+footer { background-color: var(--dark); color: #fff; }
+.badge-theme { background-color: var(--primary); display:inline-block; padding:6px 14px; border-radius:20px; font-size:0.85rem; }
+img { max-width: 100%; height: auto; }

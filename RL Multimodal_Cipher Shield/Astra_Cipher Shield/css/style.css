@@ -1,0 +1,75 @@
+﻿:root {
+  --primary: #0f766e;
+  --secondary: #115e59;
+  --accent: #e0efef;
+  --dark: #102c3b;
+  --page-background: #f1f5f9;
+  --bs-body-font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --bs-body-bg: var(--page-background);
+  --bs-body-color: #243746;
+}
+body {
+  margin: 0;
+  background-color: var(--page-background);
+  font-family: var(--bs-body-font-family);
+  color: var(--bs-body-color);
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: var(--bs-body-font-family);
+  line-height: 1.3;
+}
+h1, h2 { letter-spacing: -0.025em; }
+section { scroll-margin-top: 1.5rem; }
+.row > * { min-width: 0; }
+.navbar { background-color: var(--dark); padding-block: 1rem; }
+.navbar > .container { column-gap: 1rem; row-gap: 0.75rem; }
+.navbar-brand { margin-right: 0; white-space: normal; }
+.navbar-brand, .nav-link { color: #fff; }
+.navbar-brand:hover, .nav-link:hover, .nav-link:focus { color: #b4e6df; }
+.navbar-nav { gap: 0.25rem 1rem; }
+.navbar-toggler { flex-shrink: 0; }
+.btn-brand {
+  max-width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.65rem;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  white-space: normal;
+}
+.btn-brand:hover, .btn-brand:focus-visible, .btn-brand:active {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: #fff;
+}
+a:focus-visible, button:focus-visible { outline: 3px solid #5dbbb1; outline-offset: 4px; }
+.hero, .services { background-color: var(--accent); }
+.hero-dark { background-color: var(--dark); color: #fff; }
+.section-title { color: var(--dark); margin-bottom: 1.25rem; }
+.card { background-color: #fff; border-radius: 1rem; }
+.card-service {
+  border: 1px solid #cedfdf;
+  border-top: 4px solid var(--primary);
+  height: 100%;
+  padding: 1.5rem !important;
+}
+.card-service h6 { margin-bottom: 0.75rem; font-size: 1.05rem; }
+#about img { display: block; width: 100%; }
+#testimonial p { line-height: 1.65; }
+footer { background-color: var(--dark); color: #fff; border-top: 1px solid #36505c; }
+img { max-width: 100%; height: auto; }
+@media (max-width: 991.98px) {
+  .navbar-collapse { flex-basis: 100%; }
+  .navbar-nav { padding-top: 0.5rem; }
+  .nav-link { padding-block: 0.65rem; }
+}
+@media (max-width: 575.98px) {
+  .container { padding-inline: 1.25rem; }
+  .navbar-brand { font-size: 1.2rem !important; max-width: calc(100% - 5rem); }
+  section.py-5 { padding-block: 2.5rem !important; }
+  .lead { font-size: 1.1rem; }
+  .hero .p-4 { padding: 1.5rem 1.25rem !important; }
+}
