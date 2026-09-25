@@ -1,0 +1,68 @@
+:root {
+  --primary: #85465e;
+  --secondary: #693349;
+  --accent: #f0dfe2;
+  --dark: #382732;
+  --background: #fcf5f2;
+  --surface: #fffaf7;
+  --text: #46383e;
+  --muted: #75636a;
+  --bs-body-font-family: 'DM Sans', sans-serif;
+  --bs-body-color: var(--text);
+  --bs-body-bg: var(--background);
+}
+body { margin: 0; background: var(--background); color: var(--text); font-family: 'DM Sans', sans-serif; line-height: 1.7; overflow-wrap: break-word; }
+h1, h2, h3, .navbar-brand, .display-heading { font-family: 'Lora', Georgia, serif; line-height: 1.2; }
+h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); }
+p { margin-bottom: 1.25rem; }
+section { scroll-margin-top: 1.5rem; }
+section.py-5 { padding-block: clamp(3.5rem, 7vw, 6rem) !important; }
+.container { padding-inline: 1.5rem; }
+.row > * { min-width: 0; }
+.navbar { background-color: var(--surface); padding-block: 1.1rem; border-bottom: 1px solid var(--accent); }
+.navbar > .container { gap: 0.75rem; }
+.navbar-brand { color: var(--dark); margin-right: 0; white-space: normal; }
+.navbar-brand:hover, .navbar-brand:focus { color: var(--primary); }
+.navbar-nav { gap: 0.5rem; }
+.nav-link { color: var(--text); font-weight: 500; padding: 0.65rem 1rem !important; }
+.nav-link:hover, .nav-link:focus { color: var(--primary); }
+.navbar-toggler { flex-shrink: 0; padding: 0.5rem; border-color: #cbb3bd; }
+.hero-image-full { background-size: cover; background-position: center; }
+.hero-overlay { background: linear-gradient(110deg, rgba(56,39,50,0.8), rgba(56,39,50,0.48)); min-height: 30rem; display: flex; align-items: center; }
+.hero-overlay .container { max-width: 850px; }
+.display-heading { font-size: clamp(2.6rem, 6vw, 4.8rem); margin-bottom: 1.25rem; }
+.hero-overlay .lead { margin-bottom: 1.5rem; }
+.badge-theme { background: var(--accent); color: var(--secondary); display: inline-block; padding: 0.6rem 1rem; border-radius: 20px; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.btn { white-space: normal; max-width: 100%; border-radius: 0.5rem; font-weight: 600; padding: 0.85rem 1.6rem; }
+.btn-light { background-color: var(--surface); border-color: var(--surface); color: var(--secondary); }
+.btn-light:hover { background-color: var(--accent); border-color: var(--accent); color: var(--dark); }
+.btn-brand { background-color: var(--primary); border-color: var(--primary); color: #fff; }
+.btn-brand:hover, .btn-brand:focus-visible { background-color: var(--secondary); border-color: var(--secondary); color: #fff; }
+a:focus-visible, button:focus-visible { outline: 3px solid #ba7893; outline-offset: 4px; }
+.section-title { color: var(--dark); margin-bottom: 1.5rem; }
+#about .row { --bs-gutter-x: 3rem; --bs-gutter-y: 2.5rem; }
+#about .lead { font-size: 1.15rem; line-height: 1.75; }
+#about li { padding-left: 0.25rem; }
+#about img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 1rem !important; }
+#services { background-color: var(--accent); }
+#services .row { --bs-gutter-y: 1.5rem; }
+.card-service { background: var(--surface); border: 1px solid #e3ccd2; border-top: 3px solid var(--primary); border-radius: 0.85rem; height: 100%; padding: 1.75rem 1.25rem !important; }
+.card-service h6 { color: var(--secondary); font-size: 1.1rem; line-height: 1.45; margin-bottom: 1rem; }
+.text-muted { color: var(--muted) !important; }
+#testimonial { background-color: var(--surface); }
+#testimonial .fs-4 { font-family: 'Lora', Georgia, serif; line-height: 1.65; }
+.hero-dark { background-color: var(--dark); color: var(--surface); }
+#contact .container { max-width: 720px; }
+footer { background-color: #2d2029; color: #f0dfe2; }
+img { max-width: 100%; height: auto; }
+@media (max-width: 991.98px) {
+  .navbar-collapse { flex-basis: 100%; }
+  .navbar-nav { padding-top: 0.75rem; border-top: 1px solid var(--accent); }
+  .nav-link { padding-inline: 0 !important; }
+}
+@media (max-width: 575.98px) {
+  .navbar-brand { font-size: 1.2rem !important; max-width: calc(100% - 4rem); }
+  .hero-overlay { min-height: 26rem; }
+  #about .row { --bs-gutter-x: 1.5rem; }
+  #testimonial .fs-4 { font-size: 1.2rem !important; }
+}
