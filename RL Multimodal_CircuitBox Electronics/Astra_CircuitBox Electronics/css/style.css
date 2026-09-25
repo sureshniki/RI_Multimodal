@@ -1,0 +1,55 @@
+:root {
+  --primary: #176b60;
+  --secondary: #105247;
+  --accent: #e4eee8;
+  --dark: #173d37;
+  --page: #f7f5ef;
+  --ink: #253e38;
+  --bs-body-font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+body { margin: 0; background: var(--page); color: var(--ink); font-family: var(--bs-body-font-family); line-height: 1.7; }
+h1, h2, h3, h6, .navbar-brand, .display-heading { font-family: inherit; line-height: 1.2; letter-spacing: -0.035em; overflow-wrap: anywhere; }
+.container { padding-inline: 24px; }
+.row > * { min-width: 0; }
+section { scroll-margin-top: 24px; }
+section.py-5 { padding-block: clamp(48px, 7vw, 88px) !important; }
+.navbar { background: var(--dark); padding-block: 20px; }
+.navbar > .container { column-gap: 16px; row-gap: 16px; }
+.navbar-brand { flex: 1 1 0; min-width: 0; margin: 0; white-space: normal; font-size: clamp(1.05rem, 2.3vw, 1.5rem) !important; }
+.navbar-toggler { flex-shrink: 0; padding: 8px; }
+.navbar-brand, .nav-link { color: #fff; }
+.navbar-brand:hover, .navbar-brand:focus, .nav-link:hover, .nav-link:focus { color: #bce3d1; }
+.navbar-nav { gap: 8px; }
+.nav-link { font-weight: 600; }
+.hero { background: var(--accent); }
+.display-heading { max-width: 12ch; font-size: clamp(2.25rem, 4.5vw, 4rem); margin-bottom: 24px; }
+.lead { font-size: 1.125rem; line-height: 1.8; }
+.hero .lead { margin-bottom: 28px; }
+.hero img, #about img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 20px !important; }
+.section-title { color: var(--dark); font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 24px; }
+#about .list-unstyled { margin-top: 24px; }
+#services { background: #edece3; }
+#services .row > div { display: flex; }
+.card-service { width: 100%; height: 100%; padding: 28px 20px !important; background: #fffdf8; border: 1px solid #d8dfd5; border-top: 4px solid var(--primary); border-radius: 16px; color: var(--ink); }
+.card-service h6 { font-size: 1.125rem; line-height: 1.4; margin-bottom: 14px; }
+.card-service .text-muted { color: #52615a !important; }
+#testimonial { background: var(--page); }
+#testimonial .fst-italic { line-height: 1.65; }
+.btn-brand { max-width: 100%; padding: 14px 24px; white-space: normal; overflow-wrap: anywhere; background: var(--primary); border-color: var(--primary); border-radius: 10px; color: #fff; font-weight: 700; font-size: 1rem; }
+.btn-brand:hover, .btn-brand:focus-visible, .btn-brand:active { background: var(--secondary); border-color: var(--secondary); color: #fff; }
+a:focus-visible, button:focus-visible { outline: 3px solid #ba963e; outline-offset: 4px; }
+.hero-dark { background: var(--dark); color: #fff; }
+.hero-dark .btn-brand { background: #c5e7d5; border-color: #c5e7d5; color: var(--dark); }
+.hero-dark .btn-brand:hover { background: #a7d8bd; border-color: #a7d8bd; }
+footer { background: #102e29; color: #e1ece5; }
+img { max-width: 100%; height: auto; }
+@media (min-width: 768px) {
+  .hero .row, #about .row { --bs-gutter-x: 3rem; }
+}
+@media (min-width: 992px) {
+  .navbar-collapse { flex-grow: 0; }
+}
+@media (max-width: 767.98px) {
+  .hero .row, #about .row { --bs-gutter-y: 2rem; }
+  .display-heading { max-width: none; }
+}
