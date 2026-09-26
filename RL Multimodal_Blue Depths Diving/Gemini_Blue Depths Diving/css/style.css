@@ -42,6 +42,10 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: -0.015em;
 }
 
+.row > * {
+  min-width: 0;
+}
+
 /* Navbar */
 .navbar {
   background-color: var(--dark) !important;
@@ -58,6 +62,8 @@ h1, h2, h3, h4, h5, h6,
   display: inline-flex;
   align-items: center;
   letter-spacing: -0.02em;
+  max-width: calc(100% - 70px);
+  white-space: normal;
 }
 
 .navbar .nav-link {
@@ -79,6 +85,7 @@ h1, h2, h3, h4, h5, h6,
   border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 0.4rem 0.65rem;
   border-radius: 6px;
+  flex-shrink: 0;
 }
 
 .navbar-toggler:focus {
